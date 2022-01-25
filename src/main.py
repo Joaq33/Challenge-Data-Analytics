@@ -7,3 +7,7 @@ urls = [
     "https://datos.gob.ar/dataset/cultura-mapa-cultural-espacios-culturales/archivo/cultura_01c6c048-dbeb-44e0-8efa-6944f73715d7"]
 
 scrap_csv(urls)
+
+# Procesamiento de datos
+
+

@@ -25,7 +25,7 @@ def scrap_csv(urls):
         categoria = csv_url.split('/')[-1].split('.')[0]
 
         # Se crea el directorio donde se guardará el archivo csv
-        ubicacion = f".//{categoria}//{subcarpeta}//"
+        ubicacion = f"..//csv_files//{categoria}//{subcarpeta}//"
         Path(ubicacion).mkdir(parents=True, exist_ok=True)
 
         # Se obtiene el archivo csv del url y se lo guarda siguiendo el formato pedido
