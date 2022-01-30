@@ -1,7 +1,6 @@
 import pandas as pd
 import os
 
-# todo agregar los prints con logging
 
 normalized_list = ("cod_localidad",
                    "id_provincia",
