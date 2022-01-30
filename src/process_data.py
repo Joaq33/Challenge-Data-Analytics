@@ -27,7 +27,12 @@ def extract_and_rename(ubicaciones, categories, new_names=normalized_list):
     tabla_base = pd.DataFrame(columns=new_names)
     for ubicacion in ubicaciones:
         df = pd.read_csv(ubicacion)
-        cur_tabla = df[categories]
+        try:
+            cur_tabla = df[categories]
+        except Exception as e:
+            logging.error("Error al extraer las columnas deseadas de {}".format(ubicacion))
+            logging.error(e)
+
         for index, normalized in enumerate(new_names):
             cur_tabla.columns.values[index] = normalized
         tabla_base = pd.concat([tabla_base, cur_tabla])
