@@ -11,7 +11,7 @@ def scrap_csv(urls):
     fecha = datetime.datetime.now()
 
     # Se generan los nombres de la ruta del archivo
-    subcarpeta = fecha.strftime("//%Y-%B//")  # todo ver si se debe guardar en la carpeta actual
+    subcarpeta = fecha.strftime("//%Y-%B//")
     sufijo_nombre = fecha.strftime("-%d-%m-%Y")
 
     for url in urls:
