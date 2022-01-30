@@ -1,6 +1,6 @@
+import logging
 import pandas as pd
 import os
-
 
 normalized_list = ("cod_localidad",
                    "id_provincia",
@@ -126,6 +126,7 @@ def process_data():
     agrupaciones["Filtro"] = agrupaciones["provincia"] + ": " + agrupaciones["categoría"]
     agrupaciones = agrupaciones.drop(columns=["categoría", "provincia"])
     primera_tabla = pd.concat([primera_tabla, agrupaciones])
+    logging.info("Primera tabla generada")
 
     # CREO SEGUNDA TABLA
 
@@ -140,6 +141,7 @@ def process_data():
                             "Cantidad de espacios INCAA"]
 
     segunda_tabla = extract_and_rename(ubicaciones_cine, columnas_originales, columnas_renombradas)
+    logging.info("Segunda tabla generada")
 
     # Devuelvo las tablas
     return primera_tabla, segunda_tabla

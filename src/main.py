@@ -4,6 +4,9 @@ from db_create_tables import db_create_tables
 from db_update_tables import db_update_tables
 import logging
 
+# Establesco el nivel de logging
+logging.basicConfig(level=logging.INFO)
+
 # Archivos fuente
 logging.info("Cargando archivos fuente")
 urls = [
